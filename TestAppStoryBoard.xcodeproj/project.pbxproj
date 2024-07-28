@@ -16,6 +16,9 @@
 		8D5B92DA2C516CE800F1EFF3 /* TestAppStoryBoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5B92D92C516CE800F1EFF3 /* TestAppStoryBoardTests.swift */; };
 		8D5B92E42C516CE800F1EFF3 /* TestAppStoryBoardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5B92E32C516CE800F1EFF3 /* TestAppStoryBoardUITests.swift */; };
 		8D5B92E62C516CE800F1EFF3 /* TestAppStoryBoardUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5B92E52C516CE800F1EFF3 /* TestAppStoryBoardUITestsLaunchTests.swift */; };
+		8D7732582C55792B0037AAA8 /* TraficLightScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7732572C55792B0037AAA8 /* TraficLightScreenViewController.swift */; };
+		8D7734202C55353A00230684 /* StackViews.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D77341F2C55353A00230684 /* StackViews.storyboard */; };
+		8D7734582C55520A00230684 /* Trafic Lights Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D7734572C55520A00230684 /* Trafic Lights Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		8D5B92DF2C516CE800F1EFF3 /* TestAppStoryBoardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestAppStoryBoardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B92E32C516CE800F1EFF3 /* TestAppStoryBoardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppStoryBoardUITests.swift; sourceTree = "<group>"; };
 		8D5B92E52C516CE800F1EFF3 /* TestAppStoryBoardUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppStoryBoardUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8D7732572C55792B0037AAA8 /* TraficLightScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraficLightScreenViewController.swift; sourceTree = "<group>"; };
+		8D77341F2C55353A00230684 /* StackViews.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StackViews.storyboard; sourceTree = "<group>"; };
+		8D7734572C55520A00230684 /* Trafic Lights Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Trafic Lights Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,9 @@
 				8D5B92CB2C516CE800F1EFF3 /* Assets.xcassets */,
 				8D5B92CD2C516CE800F1EFF3 /* LaunchScreen.storyboard */,
 				8D5B92D02C516CE800F1EFF3 /* Info.plist */,
+				8D77341F2C55353A00230684 /* StackViews.storyboard */,
+				8D7734572C55520A00230684 /* Trafic Lights Screen.storyboard */,
+				8D7732572C55792B0037AAA8 /* TraficLightScreenViewController.swift */,
 			);
 			path = TestAppStoryBoard;
 			sourceTree = "<group>";
@@ -231,8 +240,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D7734202C55353A00230684 /* StackViews.storyboard in Resources */,
 				8D5B92CC2C516CE800F1EFF3 /* Assets.xcassets in Resources */,
 				8D5B92CF2C516CE800F1EFF3 /* Base in Resources */,
+				8D7734582C55520A00230684 /* Trafic Lights Screen.storyboard in Resources */,
 				8D5B92CA2C516CE700F1EFF3 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D7732582C55792B0037AAA8 /* TraficLightScreenViewController.swift in Sources */,
 				8D5B92C72C516CE700F1EFF3 /* ViewController.swift in Sources */,
 				8D5B92C32C516CE700F1EFF3 /* AppDelegate.swift in Sources */,
 				8D5B92C52C516CE700F1EFF3 /* SceneDelegate.swift in Sources */,
