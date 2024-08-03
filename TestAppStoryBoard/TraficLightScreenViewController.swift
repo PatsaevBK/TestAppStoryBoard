@@ -23,6 +23,10 @@ class TraficLightScreenViewController: UIViewController {
     colors.append(yellowLight)
     colors.append(greenLight)
     
+    colors.forEach { color in
+      color.layer.cornerRadius = color.bounds.height / 2
+    }
+    
     changeLight()
   }
   
@@ -33,7 +37,6 @@ class TraficLightScreenViewController: UIViewController {
   
   private func changeLight() {
     for (index, color) in colors.enumerated() {
-      color.layer.cornerRadius = color.bounds.height / 2
       if (index != currentLightIndex) {
         color.alpha = 0.5
       } else {
