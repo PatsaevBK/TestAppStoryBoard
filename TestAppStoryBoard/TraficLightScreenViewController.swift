@@ -8,40 +8,65 @@
 
 import UIKit
 
-class TraficLightScreenViewController: UIViewController {
+final class TraficLightScreenViewController: UIViewController {
   
-  @IBOutlet weak var redLight: UIView!
-  @IBOutlet weak var yellowLight: UIView!
-  @IBOutlet weak var greenLight: UIView!
-  private var colors: [UIView] = []
-  private var currentLightIndex: Int  = 0
+  @IBOutlet weak var redLightView: UIView!
+  @IBOutlet weak var yellowLightView: UIView!
+  @IBOutlet weak var greenLightView: UIView!
+  
+  @IBOutlet weak var startButton: UIButton!
+  
+  private var currentLight = Lights.red
+  private let lightIsOn = 1.0
+  private let lightIsOff = 0.3
 
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    colors.append(redLight)
-    colors.append(yellowLight)
-    colors.append(greenLight)
+    redLightView.alpha = lightIsOff
+    yellowLightView.alpha = lightIsOff
+    greenLightView.alpha = lightIsOff
     
-    colors.forEach { color in
-      color.layer.cornerRadius = color.bounds.height / 2
-    }
+    startButton.setTitle("Start", for: .normal)
     
-    changeLight()
+    print("viewDidLoad Размер width redLight фрейма = \(redLightView.frame.width)")
   }
   
-  @IBAction func changeCurrentLight(_ sender: Any) {
-    currentLightIndex = (currentLightIndex + 1) % colors.count
+  override func viewWillLayoutSubviews() {
+    redLightView.layer.cornerRadius = redLightView.frame.width / 2.0
+    yellowLightView.layer.cornerRadius = yellowLightView.frame.width / 2.0
+    greenLightView.layer.cornerRadius = greenLightView.frame.width / 2.0
+  }
+  
+  @IBAction func startButtonPressed() {
+    if (startButton.currentTitle == "Start") {
+      startButton.setTitle("Next", for: .normal)
+    }
+    
     changeLight()
   }
   
   private func changeLight() {
-    for (index, color) in colors.enumerated() {
-      if (index != currentLightIndex) {
-        color.alpha = 0.5
-      } else {
-        color.alpha = 1
-      }
+    switch currentLight {
+    case .red:
+      redLightView.alpha = lightIsOn
+      greenLightView.alpha = lightIsOff
+      currentLight = .yellow
+    case .yellow:
+      redLightView.alpha = lightIsOff
+      yellowLightView.alpha = lightIsOn
+      currentLight = .green
+    case .green:
+      yellowLightView.alpha = lightIsOff
+      greenLightView.alpha = lightIsOn
+      currentLight = .red
     }
+  }
+}
+
+// MARK: CurrentLight
+extension TraficLightScreenViewController {
+  private enum Lights {
+    case red, yellow, green
   }
 }
