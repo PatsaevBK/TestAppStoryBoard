@@ -24,57 +24,44 @@ final class RgbViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    setUp()
-  }
-  
-  @IBAction func redSliderAction() {
-    sliderChanged(with: .Red)
-  }
-  
-  @IBAction func greenSliderAction() {
-    sliderChanged(with: .Green)
-  }
-  
-  @IBAction func blueSliderAction() {
-    sliderChanged(with: .Blue)
-  }
-  
-  private func setUp() {
     colorImage.layer.cornerRadius = colorImage.frame.width / 10.0
     
-    redValue.text = redSlider.value.formatted()
-    greenValue.text = greenSlider.value.formatted()
-    blueValue.text = blueSlider.value.formatted()
+    redValue.text = string(from: redSlider)
+    greenValue.text = string(from: greenSlider)
+    blueValue.text = string(from: blueSlider)
     
-    changeColor()
+    setColor()
   }
   
-  private func sliderChanged(with color: Colors) {
-    switch color {
-    case .Red:
-      redValue.text = String(format: "%.2f", redSlider.value)
-      changeColor()
-    case .Green:
-      greenValue.text = String(format: "%.2f", greenSlider.value)
-      changeColor()
-    case .Blue:
-      blueValue.text = String(format: "%.2f", blueSlider.value)
-      changeColor()
+  @IBAction func sliderAction(_ sender: UISlider) {
+    setColor()
+    
+    switch sender {
+    case redSlider:
+      redValue.text = string(from: redSlider)
+    case greenSlider:
+      greenValue.text = string(from: greenSlider)
+    default:
+      blueValue.text = string(from: blueSlider)
     }
   }
   
-  private func changeColor() {
+  private func setColor() {
     colorImage.backgroundColor = UIColor(
-      red: CGFloat(redSlider.value),
-      green: CGFloat(greenSlider.value),
-      blue: CGFloat(blueSlider.value),
+      red: redSlider.value.cgFloat(),
+      green: greenSlider.value.cgFloat(),
+      blue: blueSlider.value.cgFloat(),
       alpha: alpha
     )
   }
+  
+  private func string(from slider: UISlider) -> String {
+    String(format: "%.2f", slider.value)
+  }
 }
 
-private extension RgbViewController {
-  enum Colors {
-    case Red, Green, Blue
+private extension Float {
+  func cgFloat() -> CGFloat {
+    CGFloat(self)
   }
 }
