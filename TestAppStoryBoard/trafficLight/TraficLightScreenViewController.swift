@@ -28,8 +28,6 @@ final class TraficLightScreenViewController: UIViewController {
     greenLightView.alpha = lightIsOff
     
     startButton.setTitle("Start", for: .normal)
-    
-    print("viewDidLoad Размер width redLight фрейма = \(redLightView.frame.width)")
   }
   
   override func viewWillLayoutSubviews() {

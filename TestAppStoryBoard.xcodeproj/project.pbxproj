@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D003A772C77AE4200146F24 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D003A762C77AE4200146F24 /* LoginViewController.swift */; };
 		8D09B3B82C6813AC00A458F6 /* RgbViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D09B3B72C6813AC00A458F6 /* RgbViewController.swift */; };
 		8D5B92C32C516CE700F1EFF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5B92C22C516CE700F1EFF3 /* AppDelegate.swift */; };
 		8D5B92C52C516CE700F1EFF3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5B92C42C516CE700F1EFF3 /* SceneDelegate.swift */; };
@@ -20,6 +21,7 @@
 		8D7732582C55792B0037AAA8 /* TraficLightScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7732572C55792B0037AAA8 /* TraficLightScreenViewController.swift */; };
 		8D7734202C55353A00230684 /* StackViews.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D77341F2C55353A00230684 /* StackViews.storyboard */; };
 		8D7734582C55520A00230684 /* Trafic Lights Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D7734572C55520A00230684 /* Trafic Lights Screen.storyboard */; };
+		8DF632E82C792C32004EB1AD /* GreetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF632E72C792C32004EB1AD /* GreetingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D003A762C77AE4200146F24 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8D09B3B72C6813AC00A458F6 /* RgbViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RgbViewController.swift; sourceTree = "<group>"; };
 		8D5B92BF2C516CE700F1EFF3 /* TestAppStoryBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestAppStoryBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B92C22C516CE700F1EFF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +60,7 @@
 		8D7732572C55792B0037AAA8 /* TraficLightScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraficLightScreenViewController.swift; sourceTree = "<group>"; };
 		8D77341F2C55353A00230684 /* StackViews.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StackViews.storyboard; sourceTree = "<group>"; };
 		8D7734572C55520A00230684 /* Trafic Lights Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Trafic Lights Screen.storyboard"; sourceTree = "<group>"; };
+		8DF632E72C792C32004EB1AD /* GreetingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D003A752C77AACF00146F24 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				8D003A762C77AE4200146F24 /* LoginViewController.swift */,
+				8DF632E72C792C32004EB1AD /* GreetingViewController.swift */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
 		8D09B3B32C67D6AA00A458F6 /* trafficLight */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +137,8 @@
 		8D5B92C12C516CE700F1EFF3 /* TestAppStoryBoard */ = {
 			isa = PBXGroup;
 			children = (
+				8D003A752C77AACF00146F24 /* login */,
+				8D7929912C714F9B0032CADA /* randomizer */,
 				8D09B3B42C67D70700A458F6 /* rgbColor */,
 				8D09B3B32C67D6AA00A458F6 /* trafficLight */,
 				8D5B92C22C516CE700F1EFF3 /* AppDelegate.swift */,
@@ -153,6 +168,13 @@
 				8D5B92E52C516CE800F1EFF3 /* TestAppStoryBoardUITestsLaunchTests.swift */,
 			);
 			path = TestAppStoryBoardUITests;
+			sourceTree = "<group>";
+		};
+		8D7929912C714F9B0032CADA /* randomizer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = randomizer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,9 +310,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D003A772C77AE4200146F24 /* LoginViewController.swift in Sources */,
 				8D7732582C55792B0037AAA8 /* TraficLightScreenViewController.swift in Sources */,
 				8D09B3B82C6813AC00A458F6 /* RgbViewController.swift in Sources */,
 				8D5B92C72C516CE700F1EFF3 /* ViewController.swift in Sources */,
+				8DF632E82C792C32004EB1AD /* GreetingViewController.swift in Sources */,
 				8D5B92C32C516CE700F1EFF3 /* AppDelegate.swift in Sources */,
 				8D5B92C52C516CE700F1EFF3 /* SceneDelegate.swift in Sources */,
 			);
